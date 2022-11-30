@@ -13,11 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/** Routes are unfinished! */
+
+Route::group(['middleware' => 'web'], function (){
+    Route::get('/', '\App\Http\Controllers\HomeController@index')
+        ->name('home');
+
+    Route::group(['middleware' => 'auth'], function(){
+
+    });
+
+    Route::get('/contact_us', '\App\Http\Controllers\ContactController@contact')
+        ->name('contact');
+    Route::post('/contact_us', '\App\Http\Controllers\ContactController@send');
+
+
+    Route::get('/about_us', '\App\Http\Controllers\HomeController@about')
+        ->name('about_us');
+
+    Auth::routes();
+
+
+    Route::get('/logout','\App\Http\Controllers\Auth\LoginController@logout');
 });
-
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
