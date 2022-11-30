@@ -30,3 +30,4 @@
 172.19.0.1 - - [30/Nov/2022:13:40:07 +0000] "GET /home HTTP/1.1" 302 370 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
 172.19.0.1 - - [30/Nov/2022:13:40:08 +0000] "GET /login HTTP/1.1" 200 1233 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
 172.19.0.1 - - [30/Nov/2022:13:40:14 +0000] "GET /register HTTP/1.1" 200 1162 "http://fish-site.local/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+172.19.0.1 - - [30/Nov/2022:15:59:03 +0000] "GET / HTTP/1.1" 200 5782 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
