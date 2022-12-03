@@ -15,7 +15,9 @@ return new class extends Migration
     {
         Schema::create('history', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('category');
+            $table->json('event_details');
+            $table->timestamp('created_at')->useCurrent();
         });
     }
 

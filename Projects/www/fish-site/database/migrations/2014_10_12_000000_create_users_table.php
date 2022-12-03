@@ -24,6 +24,8 @@ return new class extends Migration
             $table->string('settlement')->nullable();
             $table->string('profile_image')->default('no_profile_image.png');
             $table->string('cover_image')->default('no_cover_image.png');
+            $table->json('likers')->nullable();
+            $table->json('comments')->nullable();
             $table->json('friends')->nullable();
             $table->json('friend_requests_sent')->nullable();
             $table->json('friend_requests_received')->nullable();

@@ -15,7 +15,12 @@ return new class extends Migration
     {
         Schema::create('sanctions', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('type');
+            $table->integer('type_id');
+            $table->string('reason');
+            $table->integer('admin_id');
+            $table->timestamp('from')->useCurrent();
+            $table->timestamp('to')->nullable();
         });
     }
 
