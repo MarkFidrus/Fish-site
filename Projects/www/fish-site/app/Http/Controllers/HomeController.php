@@ -23,6 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home', ['less' => 'home.css', 'title' => 'Home']);
+        return view('home', ['less' => 'common/home.css', 'title' => 'Home']);
     }
 }
