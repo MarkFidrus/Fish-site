@@ -15,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 /** Routes are unfinished! */
 
+
 Route::group(['middleware' => 'web'], function (){
     Route::get('/', '\App\Http\Controllers\HomeController@index')
         ->name('home');
+
 
     Route::group(['middleware' => 'auth'], function(){
 
