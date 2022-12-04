@@ -1,0 +1,17 @@
+.footer {
+  position: absolute;
+  display: flex;
+  bottom: 10px;
+  width: 100%;
+  color: #adadad;
+}
+.footer-text {
+  margin: 0 auto;
+  color: #bdbdbd;
+  cursor: default;
+  transition: color 0.5s;
+}
+.footer-text:hover {
+  color: #fff;
+}
+/*# sourceMappingURL=footer.css.map */
