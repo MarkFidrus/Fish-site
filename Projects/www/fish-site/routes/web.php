@@ -20,8 +20,11 @@ Route::group(['middleware' => 'web'], function (){
 
 
     Route::group(['middleware' => 'auth'], function(){
-        Route::get('/administration_menu', '\App\Http\Controllers\AdminController@index')
-            ->name('administration_menu');
+        Route::resource('profile', '\App\Http\Controllers\ProfileController');
+        Route::get('/profile/my_profile', '\App\Http\Controllers\ProfileController@index')
+            ->name('my_profile');
+        Route::get('/profile/{id}', '\App\Http\Controllers\ProfileController@show')
+            ->name('show_profile');
     });
 
     Route::get('/contact_us', '\App\Http\Controllers\ContactController@contact')
