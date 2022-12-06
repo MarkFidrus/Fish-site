@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/** Routes are unfinished! */
-
 
 Route::group(['middleware' => 'web'], function (){
     Route::get('/', '\App\Http\Controllers\HomeController@index')
@@ -22,7 +20,8 @@ Route::group(['middleware' => 'web'], function (){
 
 
     Route::group(['middleware' => 'auth'], function(){
-
+        Route::get('/administration_menu', '\App\Http\Controllers\AdminController@index')
+            ->name('administration_menu');
     });
 
     Route::get('/contact_us', '\App\Http\Controllers\ContactController@contact')
@@ -33,8 +32,10 @@ Route::group(['middleware' => 'web'], function (){
     Route::get('/about_us', '\App\Http\Controllers\HomeController@about')
         ->name('about_us');
 
-    Auth::routes();
 
-
-    Route::get('/logout','\App\Http\Controllers\Auth\LoginController@logout');
 });
+
+Auth::routes();
+
+
+Route::get('/logout','\App\Http\Controllers\Auth\LoginController@logout');
