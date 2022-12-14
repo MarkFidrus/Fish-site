@@ -9,5 +9,5 @@
     <link rel="stylesheet" href="{{ asset('less/includes/alertMessage.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('less/includes/footer.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('less/includes/toTop.css') }}" type="text/css">
-    <title>LP - {{ $title }}</title>
+    <title>FS - {{ $title }}</title>
 </head>
