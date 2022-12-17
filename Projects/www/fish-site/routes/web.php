@@ -20,11 +20,9 @@ Route::group(['middleware' => 'web'], function (){
 
 
     Route::group(['middleware' => 'auth'], function(){
+        Route::get('/profile/{id}', '\App\Http\Controllers\ProfileController@get_selector');
+        Route::post('/profile/{id}', '\App\Http\Controllers\ProfileController@post_selector');
         Route::resource('profile', '\App\Http\Controllers\ProfileController');
-        Route::get('/profile/my_profile', '\App\Http\Controllers\ProfileController@index')
-            ->name('my_profile');
-        Route::get('/profile/{id}', '\App\Http\Controllers\ProfileController@show')
-            ->name('show_profile');
     });
 
     Route::get('/contact_us', '\App\Http\Controllers\ContactController@contact')
@@ -35,10 +33,7 @@ Route::group(['middleware' => 'web'], function (){
     Route::get('/about_us', '\App\Http\Controllers\HomeController@about')
         ->name('about_us');
 
+    Auth::routes();
 
+    Route::get('/logout','\App\Http\Controllers\Auth\LoginController@logout');
 });
-
-Auth::routes();
-
-
-Route::get('/logout','\App\Http\Controllers\Auth\LoginController@logout');
